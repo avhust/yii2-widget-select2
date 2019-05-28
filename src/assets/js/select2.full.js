@@ -3168,6 +3168,9 @@ S2.define('select2/data/select',[
 
     var $options = this.$element.children();
 
+    // var showChildren = true;
+    var showChildren = false;
+
     $options.each(function () {
       var $option = $(this);
 
@@ -3175,12 +3178,24 @@ S2.define('select2/data/select',[
         return;
       }
 
+      if ($option.is('optgroup')) { // next optgroup
+        showChildren = false;
+      }
+
       var option = self.item($option);
 
       var matches = self.matches(params, option);
 
       if (matches !== null) {
+        if ($option.is('optgroup')) {
+          showChildren = true;
+        } else {
+          showChildren = false;
+        }
+        console.log(matches);
         data.push(matches);
+      } else if (showChildren) {
+        data.push(option);
       }
     });
 
