@@ -10,6 +10,10 @@
         <img src="http://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" alt="Donate"/>
     </a>
 </h1>
+<h2>
+Fork. The only change is children included when searched for 2 level dropdowns (optgroup, options).
+So if optgroup title contains searched term then all its children (options) are shown too.
+</h2>
 
 [![Stable Version](https://poser.pugx.org/kartik-v/yii2-widget-select2/v/stable)](https://packagist.org/packages/kartik-v/yii2-widget-select2)
 [![Unstable Version](https://poser.pugx.org/kartik-v/yii2-widget-select2/v/unstable)](https://packagist.org/packages/kartik-v/yii2-widget-select2)
